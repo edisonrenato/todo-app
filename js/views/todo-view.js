@@ -19,6 +19,7 @@ var app = app || {};
 		events: {
 			'click .toggle': 'toggleCompleted',
 			'dblclick label': 'edit',
+			'click .edit-btn': 'edit',
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
@@ -54,6 +55,7 @@ var app = app || {};
 			this.$input = this.$('.edit');
 			return this;
 		},
+
 
 		toggleVisible: function () {
 			this.$el.toggleClass('hidden', this.isHidden());
